@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savor | Premium Food Ordering</title>
+    <meta name="description" content="Browse and order delicious premium food items quickly and easily.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class='bx bxs-bowl-hot'></i> Savor
+        </div>
+        <div class="nav-right">
+            <div class="cart-icon" id="cartIcon">
+                <i class='bx bx-shopping-bag'></i>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Cravings</h1>
+            <p>Experience gourmet meals delivered right to your door in minutes.</p>
+            <button class="cta-btn" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Order Now</button>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="section-header">
+            <h2>Our Signature Menu</h2>
+            <div class="categories" id="categoryTabs">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="Burgers">Burgers</button>
+                <button class="category-btn" data-category="Pizza">Pizza</button>
+                <button class="category-btn" data-category="Healthy">Healthy</button>
+            </div>
+        </div>
+        
+        <div class="menu-grid" id="menuGrid">
+            <!-- Menu items injected via JS -->
+        </div>
+    </section>
+
+    <!-- Cart Overlay & Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Order</h2>
+            <button class="close-cart" id="closeCart"><i class='bx bx-x'></i></button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items injected via JS -->
+            <div class="empty-cart-msg">Your cart is empty</div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">Item added to cart!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
